@@ -1,0 +1,42 @@
+:root {
+  --dark:black;
+  --bright: rgb(255, 250, 250);
+  --trans: 0px;
+  --ball:white;
+}
+.dark-mode {
+  --bright: black;
+  --trans: 55px;
+  --dark: rgb(216, 216, 73);
+  --ball:black;
+}
+
+body {
+  background-color: var(--bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.2s linear;
+}
+.container {
+  background: var(--dark);
+  border-radius: 35%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  height: 35px;
+  width: 100px;
+}
+
+#ball {
+  background-color:var(--ball);
+  border-radius: 50%;
+  position: relative;
+  top: 4.5px;
+  left: -28px;
+  height: 26px;
+  width: 26px;
+  transform: translateX(var(--trans));
+  transition: transform 0.2s linear;
+}
